@@ -10,43 +10,27 @@ custom_js:
   - justcharts
 ---
 
+# UFO Sightings Visualization
 
-# Example including vega-lite
+Below is a bar plot visualization of the number of ufo sightings in the USA by decade. This is bound interactively to another plot that visualizes a time series of the number of cases by month-year as a line plot. The bar plot is used from homework 9, while the other plot is novel. 
 
-Example comes from this [great blog post right here](https://blog.4dcu.be/programming/2021/05/03/Interactive-Visualizations.html) that was also used in [our test import script](https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/blob/main/week01/test_imports_week01.ipynb).
+## Bar Plot:
+For the bar plot, the x and y encodings are defined as decade and sum of number of sightings respectively. The color encoding is conditioned on the selection. The selection type used here is click that selects a single bar when clicked.
 
-We can use a vegachart HTML tag like so:
-
-```
-<vegachart schema-url="{{ site.baseurl }}/assets/json/cars.json" style="width: 100%"></vegachart>
-```
-
-<vegachart schema-url="{{ site.baseurl }}/assets/json/cars.json" style="width: 100%"></vegachart>
-
-In theory, you can also use [Jekyll hooks](https://jekyllrb.com/docs/plugins/hooks/) to do it, but I haven't figured out a way that looks nice yet.
+## Line Plot:
+For the line plot the x and y encodings are the date (formatted to be month-year only) and sum of number of sightings respectively. The data for this visualization is transformed using the click selection.
 
 
-## Search The Data & Methods
 
-Below is where we can put some links to both the data and the analysis code as buttons:
+<vegachart schema-url="{{ site.baseurl }}/assets/json/ufo_vis.json" style="width: 100%"></vegachart>
 
-```
+On selection of particular decade on the bar plot, the line plot gets truncated for the selected decade. To build these I prepared the data in python and then created the visualization using Altair.
+
+
 <div class="left">
-{% include elements/button.html link="https://github.com/vega/vega/blob/main/docs/data/cars.json" text="The Data" %}
+{% include elements/button.html link="https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/blob/main/data/ufo-scrubbed-geocoded-time-standardized-00.csv" text="The Data" %}
 </div>
 
 <div class="right">
-{% include elements/button.html link="https://blog.4dcu.be/programming/2021/05/03/Interactive-Visualizations.html" text="The Analysis" %}
+{% include elements/button.html link="https://github.com/harshbaberwal21/harshbaberwal.github.io/blob/main/python_notebooks/UFO_Sightings_Viz.ipynb" text="The Analysis" %}
 </div>
-```
-
-<!-- these are written in a combo of html and liquid --> 
-
-<div class="left">
-{% include elements/button.html link="https://github.com/vega/vega/blob/main/docs/data/cars.json" text="The Data" %}
-</div>
-
-<div class="right">
-{% include elements/button.html link="https://github.com/jnaiman/online_cv_public/blob/main/python_notebooks/test_generate_plots.ipynb" text="The Analysis" %}
-</div>
-
