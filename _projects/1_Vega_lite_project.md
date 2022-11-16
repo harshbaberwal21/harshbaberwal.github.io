@@ -22,18 +22,11 @@ For the bar plot, the x and y encodings are defined as decade and sum of number 
 For the line plot the x and y encodings are the date (formatted to be month-year only) and sum of number of sightings respectively. The data for this visualization is transformed using the click selection.
 
 
-We can use a vegachart HTML tag like so:
-
-```
-Quote block
-```
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/ufo_vis.json" style="width: 100%"></vegachart>
 
 On selection of particular decade on the bar plot, the line plot gets truncated for the selected decade. To build these I prepared the data in python and then created the visualization using Altair.
 
-
-## Search The Data & Methods
 
 <div class="left">
 {% include elements/button.html link="https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/blob/main/data/ufo-scrubbed-geocoded-time-standardized-00.csv" text="The Data" %}
