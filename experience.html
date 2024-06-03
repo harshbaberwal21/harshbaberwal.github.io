@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,35 +17,36 @@
     </nav>
     <div class="content-section">
         <h1>Professional Experience</h1>
-        <h2>Senior Data Scientist, The Nielsen Company, US</h2>
-        <p><strong>Jan 2023 – Present</strong></p>
-        <ul>
-            <li>Fusing TV and digital data to measure cross-platform reach.</li>
-            <li>Developed a model with ~76% accuracy for streaming activity prediction.</li>
-            <li>Implemented error calculation for content reach and volume estimates.</li>
-            <li>Optimized PySpark code, reducing runtime by 15%.</li>
-        </ul>
-        
-        <h2>Senior Decision Science Associate, Axtria, India</h2>
-        <p><strong>Jan 2020 - Jun 2021</strong></p>
-        <ul>
-            <li>Developed market mix models, optimizing marketing budgets and saving ~$25M.</li>
-            <li>Quantified a 5% sales increase from a promotional event through A/B testing.</li>
-        </ul>
-        
-        <h2>Revenue Analyst, PVR Cinemas, India</h2>
-        <p><strong>Jul 2019 - Nov 2019</strong></p>
-        <ul>
-            <li>Analyzed a new revenue stream, unlocking 13% incremental revenue.</li>
-            <li>Automated recurring reporting, enhancing efficiency.</li>
-        </ul>
-        
-        <h2>Analyst, Absolutdata Research and Analytics Solutions, India</h2>
-        <p><strong>Jul 2017 - Jun 2019</strong></p>
-        <ul>
-            <li>Developed k-means segmentation model for a Dutch e-commerce company.</li>
-            <li>Modeled a data pipeline, identifying multi-carrier subscribers.</li>
-        </ul>
+        <div class="carousel-container">
+            <div id="company-carousel" class="carousel"></div>
+            <div id="experience-carousel" class="carousel"></div>
+        </div>
     </div>
+    <script>
+        const companies = ['The Nielsen Company', 'Axtria', 'PVR Cinemas', 'Absolutdata'];
+        const experiences = [
+            'Fusing TV and digital data to measure cross-platform reach.',
+            'Developed market mix models, optimizing marketing budgets.',
+            'Analyzed a new revenue stream, unlocking 13% incremental revenue.',
+            'Developed k-means segmentation model for a Dutch e-commerce company.'
+        ];
+
+        const companyCarousel = document.getElementById('company-carousel');
+        const experienceCarousel = document.getElementById('experience-carousel');
+
+        companies.forEach(company => {
+            const div = document.createElement('div');
+            div.className = 'carousel-item';
+            div.innerText = company;
+            companyCarousel.appendChild(div);
+        });
+
+        experiences.forEach(experience => {
+            const div = document.createElement('div');
+            div.className = 'carousel-item';
+            div.innerText = experience;
+            experienceCarousel.appendChild(div);
+        });
+    </script>
 </body>
 </html>
