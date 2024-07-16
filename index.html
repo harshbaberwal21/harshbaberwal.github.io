@@ -1,23 +1,348 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Harsh Baberwal</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GWorld</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="experience.html">Professional Experience</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body style="background-color: #160d27ff">
+
+    <!-- Adding the navbar style="background-color: #160d27ff" -->
+
+    <nav class="navbar navbar-expand-md py-3 fixed-top" style="background-color: #160d27ff">
+      <div class="container">
+        <a href="#" class = "navbar-brand text-white fs-3">Harsh Baberwal</a>
+
+        <!-- Adding the hamburger button after (done above) adding the brand icon -->
+        <button class="navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navmenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--  Putting the nev menu items inside another div -->
+        <div class="collapse navbar-collapse" id = "navmenu">
+          <ul class = "navbar-nav ms-auto">
+
+            <li class="nav-item">
+              <a href="#WorkExperience" class="nav-link text-white fs-5">Work Experience</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#Projects" class="nav-link text-white fs-5">Projects</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#ContactMe" class="nav-link text-white fs-5">Contact Me</a>
+            </li>
+
+
+          </ul>
+        </div>
+      </div>
     </nav>
-    <div class="main-content">
-        <h1>Harsh Baberwal</h1>
-        <h2>Data Scientist</h2>
-    </div>
-</body>
+    
+
+
+
+    <!-- Adding the first section for Home -->
+    
+
+    <section class="text-light text-center text-sm-start container">
+      <div class="container py-3 my-3 mt-5">
+        <!-- for side by side placement of flex items d-flex -->
+        <!-- sm, md and lg are way to add breakpoints for the flex items -->
+        <!--  -->
+        <div class="d-flex align-items-center justify-content-center vh-50">
+          <!-- image fluid to fit the image in the container, w-50 to reduce the size to 50% of actual -->
+          <!-- d-none remove the image display and d-sm-block will display the image only above the small breakpoint -->
+          <!-- image color:#AD01AD; complementary color:#01AD01 -->
+          <img class = "image-fluid w-50 d-none d-md-block", src="images/coder.svg" alt="GabarAvatar">
+
+          <div class = "p-1 p-lg-5">
+            <!-- Use span with text-color to change the color of any word/phrase of the text -->
+            <h1>Hi There!</h1>
+            <!-- Class = lead for bigger text -->
+            <p class="lead my-5" style="text-align: justify">
+              I'm Harsh. 
+              I'm a data scientist with professional experience of developing data-centric solutions for problems spanning across various industries. 
+              I have a strong understanding of DevOps fundamentals as well that allows me to effectively prototype and productionize solutions.
+            </p>
+
+            <p class="lead" style="text-align: justify">
+              <strong class="h4">PS: </strong>I'm open to work. Check out my resume <a href="HB-Resume.pdf" download="HB-Resume.pdf">here</a>.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- Adding work experience section -->
+
+    <section id="WorkExperience">
+        <div class="container text-center text-md-start text-light py-3 mt-3 mt-4" style="color:#2c1a4dff">
+            <h1>Work Experience</h1>
+        </div>
+
+        <div class="d-flex flex-row container">
+            <div class="col-md-3 align-items-stretch d-none d-lg-flex">
+              <img class = "image-fluid img-thumbnail float-start d-none d-lg-block", src="images/coder.svg" alt="GabarAvatar">
+            </div>
+
+            <div class="col-md-9 flex-grow-1">
+                <div class="container">
+                    <!-- Work Ex Accordian 1 -->
+                    <div class="accordion" id="accordionExp">
+
+
+                        <!-- Nielsen -->
+                        <div class="accordion-item">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNielsen">
+                                <h3>
+                                  Senior Data Scientist, The Nielsen Company (US)<br>
+
+                                  <div class="h6 my-1 mx-1 pt-2 text-muted fw-bold">
+                                    Jan'23 to Jul'24 <small class="fw-normal">(1.5 Years)</small>
+                                  </div>
+                                </h3>
+                            </button>
+                            <div id="collapseNielsen" class="accordion-collapse collapse"  data-bs-parent="#accordionExp">
+                                <div class="accordion-body"> 
+
+                                    <div class="bg-white">
+                                      <div class="h6 text-dark py-1">
+                                        I contributed in maintaining and enhancing a data science product that estimated the cross-platform content consumption across the US by fusing Nielsen's proprietary panels data.
+                                      </div>
+                                      <div class="h6 text-dark">
+                                        <span class="h6 fw-bold">Tech Stack:</span> Python, PySpark, SQL, AirFlow, git, bash, AWS Services (EC2, EMR, & S3)
+                                      </div>
+
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+
+                        
+                        <!-- Axtria Accordian -->
+                        <div class="accordion-item border-top">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAXT">
+                                <h3>
+                                  Senior Decision Science Associate, Axtria<br>
+
+                                  <div class="h6 my-1 mx-1 pt-2 text-muted fw-bold">
+                                    Jan'20 to Jun'21 <small class="fw-normal">(1.5 Years)</small>
+                                  </div>
+                                </h3> 
+                            </button>
+                            <div id="collapseAXT" class="accordion-collapse collapse"  data-bs-parent="#accordionExp">
+                                <div class="accordion-body"> 
+
+                                      <div class="bg-white">
+                                        <div class="h6 text-dark py-1">
+                                          As part of the commercial excellence team, I helped clients in the pharmaceutical space improve their marketing and sales strategies through advanced analytics techniques such as marketing mix modeling.
+                                        </div>
+                                        <div class="h6 text-dark">
+                                          <span class="h6 fw-bold">Tech Stack:</span> R, SQL & SparkR, MS Excel, Python & PySpark, BitBucket
+                                        </div>
+
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+
+
+                        <!-- PVR Accordian -->
+                        <div class="accordion-item border-top">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePVR">
+                                <h3>
+                                  Revenue Analyst, PVR Cinemas Ltd.<br>
+
+                                  <div class="h6 my-1 mx-1 pt-2 text-muted fw-bold">
+                                    Jul'19 to Nov'19 <small class="fw-normal">(5 Months)</small>
+                                  </div>
+                                </h3> 
+                            </button>
+                            <div id="collapsePVR" class="accordion-collapse collapse"  data-bs-parent="#accordionExp">
+                                <div class="accordion-body">
+
+
+                                    <div class="bg-white">
+                                      <div class="h6 text-dark py-1">
+                                        I assisted VP of revenue management (and COO) with analyses aiming towards supporting revenue enhancement initiatives along with other ad-hoc causal analyses.
+                                      </div>
+                                      <div class="h6 text-dark">
+                                        <span class="h6 fw-bold">Tech Stack:</span> MS-Excel & VBA, Python
+                                      </div>
+
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+
+                        
+                        <!-- ADT Accordian  -->
+                        <div class="accordion-item border-top">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseADT">
+                                <h3>
+                                  Analyst, AbsolutData<br>
+
+                                  <div class="h6 my-1 mx-1 pt-2 text-muted fw-bold">
+                                    Jun'17 to Jun'19 <small class="fw-normal">(2 Years)</small>
+                                  </div>
+                                </h3> 
+                            </button>
+                            <div id="collapseADT" class="accordion-collapse collapse"  data-bs-parent="#accordionExp">
+                                <div class="accordion-body"> 
+
+                                    <div class="bg-white">
+                                      <div class="h6 text-dark py-1">
+                                        As part of the marketing effectiveness team, I worked on various projects for clients in e-commerce and telecom industries. The projects ranged from reporting automation to machine learning based solutions.
+                                      </div>
+                                      <div class="h6 text-dark">
+                                        <span class="h6 fw-bold">Tech Stack:</span> Python, R, HiveQL & SQL, Google Big-Query, MS-SQL Server, MS-Excel & VBA
+                                      </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container text-center text-md-start pt-5">
+          <p class="text-muted h6">
+            For a detailed view, you can check out my resume <a href="HB-Resume.pdf" download="HB-Resume.pdf">here</a>
+          </p>
+        </div>
+    </section>
+
+
+
+    <section id="Projects">
+      <div class="container text-center text-md-start text-light py-3 my-3 mt-5">
+        <h1>Projects</h1>
+      </div>
+
+      <div class="container d-flex flex-wrap mt-4 justify-content-center justify-content-md-start gap-4 mb-3">
+
+        <!-- Academic -->
+        <div class="card filter-div" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">eCommerce Marketing Analysis</h5>
+            <!-- <p class="card-text">Cutomer segmentation and promotion response prediction basis customer demographic and purchasing behavior</p> -->
+            <a class="btn btn-primary mt-3" href="https://github.com/harshbaberwal21/E-commerce-Marketing-Analysis" target="_blank">
+              View
+            </a>
+            <!-- <i onclick="LikeToggle(this)" class="btn bi bi-hand-thumbs-up"></i> -->
+          </div>
+        </div>
+
+        <!-- Academic -->
+        <div class="card filter-div" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Metro Inter-State Traffic Analysis</h5>
+            <!-- <p class="card-text">Analysis of metro interstate traffic volume using the methods of time series and spectral analysis</p> -->
+            <a class="btn btn-primary mt-3" href="https://github.com/harshbaberwal21/Metro-Interstate-Traffic-Analysis" target="_blank">
+              View
+            </a>
+            <!-- <i onclick="LikeToggle(this)" class="btn bi bi-hand-thumbs-up"></i> -->
+          </div>
+        </div>
+
+        <!-- Academic -->
+        <div class="card filter-div" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Information Modeling<br><br></h5>
+            <!-- <p class="card-text">Modeling information system for a University's employee motor pool system.</p> -->
+            <a class="btn btn-primary mt-3" href="https://github.com/harshbaberwal21/Information-Modeling" target="_blank">
+              View
+            </a>
+            <!-- <i onclick="LikeToggle(this)" class="btn bi bi-hand-thumbs-up"></i> -->
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+
+    <section id="ContactMe">
+        <div class="container text-center text-md-start text-light py-3 my-3 mt-5">
+          <h1>ContactMe</h1>
+        </div>
+        <div class="col-md-6">
+
+          <div class="text-center text-md-start text-light mt-5">
+            <div class="d-flex flex-row text-center text-md-start text-light mx-5 px-5 py-4">
+              <div class="col-md-4 text-center text-md-start text-light">
+                <h3>Email</h3>
+              </div>
+              <div class="col-md-8 text-center text-md-start text-light px-2">
+                <a class="h4" href= "mailto: baberwalharsh@outlook.com" target="_blank"> baberwalharsh@outlook.com </a>
+              </div>            
+            </div>
+          </div>
+
+          <div class="text-center text-md-start text-light mt-5">
+            <div class="d-flex flex-row text-center text-md-start text-light mx-5 px-5 py-4">
+              <div class="col-md-4 text-center text-md-start text-light">
+                <h3>LinkedIn</h3>
+              </div>
+              <div class="col-md-8 text-center text-md-start text-light px-2">
+                <a class="h4" href= "https://www.linkedin.com/in/baberwalharsh/" target="_blank"> linkedin.com/in/baberwalharsh </a>
+              </div>            
+            </div>
+          </div>
+
+          <div class="text-center text-md-start text-light mt-5">
+            <div class="d-flex flex-row text-center text-md-start text-light mx-5 px-5 pt-4">
+              <div class="col-md-4 text-center text-md-start text-light">
+                <h3>GitHub</h3>
+              </div>
+              <div class="col-md-8 text-center text-md-start text-light px-2">
+                <a class="h4" href= "https://github.com/harshbaberwal21/" target="_blank"> github.com/harshbaberwal21 </a>
+              </div>            
+            </div>
+          </div>
+
+        
+        </div>
+    </section>
+
+
+
+    <!-- J-Query Codes and Body end below -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    
+    <script>
+      function LikeToggle(x) {
+        x.classList.toggle("hand-thumbs-up-fill");
+      }
+    </script>
+    
+    
+    <script>
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+      })
+      </script>
+
+
+    <script>
+      $(document).ready(function(){
+        $('[data-bs-toggle="popover"]').popover();
+      })
+    </script>
+  </body>
 </html>
+
